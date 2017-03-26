@@ -1,0 +1,49 @@
+#博客
+[wing](http://androidwing.net/)
+[廖雪峰的官方网站](http://www.liaoxuefeng.com/)
+[张旭童](http://my.csdn.net/zxt0601)
+[严振杰](http://my.csdn.net/yanzhenjie1003)
+[貌似掉线](http://my.csdn.net/maosidiaoxian)
+[张磊BARON](http://my.csdn.net/baron_leizhang)(安居客)
+[从Android出发](http://www.cnblogs.com/woaixingxing/)
+[张旭童](http://my.csdn.net/zxt0601)(仿人人美剧)
+#Android学习
+[Android 开发学习路线图](https://www.diycode.cc/topics/117)
+[一个老鸟发的公司内部整理的 Android 学习路线图 Markdown 版本](https://www.diycode.cc/topics/122)
+[Android官方培训课程中文版](http://hukai.me/android-training-course-in-chinese/index.html)
+[2017Android进阶之路与你同行](http://www.jianshu.com/p/c0ec2a7fc26a)
+#AndroidStudio工具
+[Android Studio快速开发之道](http://blog.csdn.net/yissan/article/details/53374437)
+[Android攻城狮—全套必备神级工具（开发，插件，效率）](http://www.jianshu.com/p/0911efbf8009)[Android Studio快速开发之道](http://blog.csdn.net/yissan/article/details/53374437)
+[Android Studio每日小技巧](http://www.jianshu.com/p/a40fc225c337?utm_campaign=hugo&utm_medium=reader_share&utm_content=note&utm_source=qq)
+[Android Studio相见恨晚的操作锦集(9月22日更新)](http://www.jianshu.com/p/bc8f6bfe12c6)
+[Android Studio，使用技巧，问题记录和一些好用的插件](http://www.jianshu.com/p/e8d92dc3d806)
+[Android Studio SVN 使用方法](http://blog.csdn.net/android_study_ok/article/details/51387677)
+#开源库
+[Android-Debug-Database](https://github.com/amitshekhariitbhu/Android-Debug-Database)(All these features work without rooting your device)
+#Android
+ ##网络请求
+[一网打尽OkHttp中的缓存问题](http://blog.csdn.net/u012702547/article/details/53143322)
+##设计模式
+[玩转Android之MVVM开发模式实战，炫酷的DataBinding！](http://blog.csdn.net/u012702547/article/details/52077515)
+[最简单的Dagger2入门教程](http://blog.csdn.net/lisdye2/article/details/51942511)
+##动画 
+[Android 5.0+ 高级动画开发系列 矢量图动画](http://blog.csdn.net/smartbetter/article/details/54708200)
+[Android Transition Framework详解---超炫的动画框架](http://www.jianshu.com/p/e497123652b5#)
+##Material Design系列
+[[Android 仿微信通讯录 导航分组列表-上]使用ItemDecoration为RecyclerView打造带悬停头部的分组列表](http://blog.csdn.net/zxt0601/article/details/52355199)
+[Material Design系列，自定义Behavior之上滑显示返回顶部按钮](http://blog.csdn.net/yanzhenjie1003/article/details/51941288)
+[RecyclerView 之Adapter的简化过程浅析](http://www.jianshu.com/p/3e60147523e1)
+[Android 详细分析AppBarLayout的五种ScrollFlags](http://www.jianshu.com/p/7caa5f4f49bd)
+[五行代码实现 炫动滑动 卡片层叠布局，仿探探、人人影视订阅界面 简单&优雅：LayoutManager+ItemTouchHelper](http://www.jianshu.com/p/9ccbee36aa71)
+##性能优化
+[Android应用瘦身，从18MB到12.5MB](http://blog.coderclock.com/2017/01/24/android/Android%E5%BA%94%E7%94%A8%E7%98%A6%E8%BA%AB%EF%BC%8C%E4%BB%8E18MB%E5%88%B012.5MB/)
+##其他
+[给 Android 开发者的 RxJava 详解](http://gank.io/post/560e15be2dca930e00da1083)
+[轻松实现Android 更换皮肤(主题)](http://blog.csdn.net/yuanzeyao/article/details/42390431)
+[系统自带DownloadManager详解](http://blog.csdn.net/u012209506/article/details/56012744
+)
+[RxJava系列](https://zhuanlan.zhihu.com/p/20687178)
+[Android开发调试神器Stetho介绍-只有你想不到没有你看不到](http://www.jianshu.com/p/a7fdcb2641e8)
+[比较常用UML类图几种关系的小结](http://www.jb51.net/article/73358.htm)
+[RxJava 与 Retrofit 结合的最佳实践](http://gank.io/post/56e80c2c677659311bed9841)
