@@ -16,6 +16,8 @@
 
 [张旭童](http://my.csdn.net/zxt0601)(仿人人美剧)
 
+[启舰](http://blog.csdn.net/harvic880925?viewmode=contents)(满满的干货)
+
 #Android学习
 
 [Android 开发学习路线图](https://www.diycode.cc/topics/117)
@@ -45,6 +47,7 @@
 [Android Studio SVN 使用方法](http://blog.csdn.net/android_study_ok/article/details/51387677)
 
 [ 全面介绍Android Studio中Git 的使用（一）](http://blog.csdn.net/gao_chun/article/details/49817229/)
+> 图文并茂，内容详细
 
 #开源库
 
@@ -78,7 +81,13 @@
 
 [Android 详细分析AppBarLayout的五种ScrollFlags](http://www.jianshu.com/p/7caa5f4f49bd)
 
+[RecyclerView.Adapter优化了吗？](http://www.jianshu.com/p/411ab861034f)
+
 [五行代码实现 炫动滑动 卡片层叠布局，仿探探、人人影视订阅界面 简单&优雅：LayoutManager+ItemTouchHelper](http://www.jianshu.com/p/9ccbee36aa71)
+
+[Translucent StatusBar 的一点实践总结](http://codpoe.me/2016/08/08/translucent-statusbar/)(沉浸式状态栏)
+
+[深入理解 RecyclerView 系列之一：ItemDecoration](https://blog.piasy.com/2016/03/26/Insight-Android-RecyclerView-ItemDecoration/)
 
 ##性能优化
 
