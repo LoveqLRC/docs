@@ -40,7 +40,11 @@
 
 [Android Studio，使用技巧，问题记录和一些好用的插件](http://www.jianshu.com/p/e8d92dc3d806)
 
+##版本控制
+
 [Android Studio SVN 使用方法](http://blog.csdn.net/android_study_ok/article/details/51387677)
+
+[ 全面介绍Android Studio中Git 的使用（一）](http://blog.csdn.net/gao_chun/article/details/49817229/)
 
 #开源库
 
