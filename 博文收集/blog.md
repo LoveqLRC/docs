@@ -32,8 +32,7 @@
 
 [Android攻城狮—全套必备神级工具（开发，插件，效率）](http://www.jianshu.com/p/0911efbf8009)
 
-[Android Studio快速开发之道]
-(http://blog.csdn.net/yissan/article/details/53374437)
+[Android Studio快速开发之道](http://blog.csdn.net/yissan/article/details/53374437)
 
 [Android Studio每日小技巧](http://www.jianshu.com/p/a40fc225c337?utm_campaign=hugo&utm_medium=reader_share&utm_content=note&utm_source=qq)
 
