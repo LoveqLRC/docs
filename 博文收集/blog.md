@@ -109,3 +109,5 @@
 [比较常用UML类图几种关系的小结](http://www.jb51.net/article/73358.htm)
 
 [RxJava 与 Retrofit 结合的最佳实践](http://gank.io/post/56e80c2c677659311bed9841)
+
+[Android View移动的六种方法小结](http://www.jb51.net/article/76565.htm#comments)
