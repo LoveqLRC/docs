@@ -18,7 +18,7 @@
 
 [启舰](http://blog.csdn.net/harvic880925?viewmode=contents)(满满的干货)
 
-#Android学习
+#学习
 
 [Android 开发学习路线图](https://www.diycode.cc/topics/117)
 
@@ -42,7 +42,7 @@
 
 [Android Studio，使用技巧，问题记录和一些好用的插件](http://www.jianshu.com/p/e8d92dc3d806)
 
-##版本控制
+#版本控制
 
 [Android Studio SVN 使用方法](http://blog.csdn.net/android_study_ok/article/details/51387677)
 
@@ -53,25 +53,23 @@
 
 [Android-Debug-Database](https://github.com/amitshekhariitbhu/Android-Debug-Database)(All these features work without rooting your device)
 
-#Android
-
-##网络请求
+#网络请求
 
 [一网打尽OkHttp中的缓存问题](http://blog.csdn.net/u012702547/article/details/53143322)
 
-##设计模式
+#设计模式
 
 [玩转Android之MVVM开发模式实战，炫酷的DataBinding！](http://blog.csdn.net/u012702547/article/details/52077515)
 
 [最简单的Dagger2入门教程](http://blog.csdn.net/lisdye2/article/details/51942511)
 
-##动画 
+#动画 
 
 [Android 5.0+ 高级动画开发系列 矢量图动画](http://blog.csdn.net/smartbetter/article/details/54708200)
 
 [Android Transition Framework详解---超炫的动画框架](http://www.jianshu.com/p/e497123652b5#)
 
-##Material Design系列
+#Material Design系列
 
 [[Android 仿微信通讯录 导航分组列表-上]使用ItemDecoration为RecyclerView打造带悬停头部的分组列表](http://blog.csdn.net/zxt0601/article/details/52355199)
 
@@ -89,11 +87,11 @@
 
 [深入理解 RecyclerView 系列之一：ItemDecoration](https://blog.piasy.com/2016/03/26/Insight-Android-RecyclerView-ItemDecoration/)
 
-##性能优化
+#性能优化
 
 [Android应用瘦身，从18MB到12.5MB](http://blog.coderclock.com/2017/01/24/android/Android%E5%BA%94%E7%94%A8%E7%98%A6%E8%BA%AB%EF%BC%8C%E4%BB%8E18MB%E5%88%B012.5MB/)
 
-##其他
+#其他
 
 [给 Android 开发者的 RxJava 详解](http://gank.io/post/560e15be2dca930e00da1083)
 
