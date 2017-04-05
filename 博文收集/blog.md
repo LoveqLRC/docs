@@ -109,3 +109,5 @@
 [RxJava 与 Retrofit 结合的最佳实践](http://gank.io/post/56e80c2c677659311bed9841)
 
 [Android View移动的六种方法小结](http://www.jb51.net/article/76565.htm#comments)
+
+[ 关于解决AndroidStudio自动下载第三方jar包速度慢的问题解决方法](http://blog.csdn.net/u012073643/article/details/66480579)
