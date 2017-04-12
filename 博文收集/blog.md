@@ -111,3 +111,7 @@
 [Android View移动的六种方法小结](http://www.jb51.net/article/76565.htm#comments)
 
 [ 关于解决AndroidStudio自动下载第三方jar包速度慢的问题解决方法](http://blog.csdn.net/u012073643/article/details/66480579)
+
+[[干货] Glow Android 优化实践](http://www.jianshu.com/p/a8b5278cdbcd)
+
+[大家都是怎样处理Gradle中的这个文件下载慢的问题的？](https://www.zhihu.com/question/37810416/answer/153168766)
