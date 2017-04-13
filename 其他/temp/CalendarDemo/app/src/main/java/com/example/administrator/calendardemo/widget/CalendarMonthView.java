@@ -3,6 +3,7 @@ package com.example.administrator.calendardemo.widget;
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,8 @@ public class CalendarMonthView extends RecyclerView {
 
     private final List<CalendarBean> calendarBeanList;
     private final boolean isToday;
-    private int selectPosition = -1;
+    private int  mLastSelectPosition = -1;
+    private  boolean once=false;
 
     public CalendarMonthView(Context context, List<CalendarBean> calendarBeanList, boolean isToday) {
         super(context);
@@ -38,9 +40,9 @@ public class CalendarMonthView extends RecyclerView {
     private void initSelectPosition() {
         if (isToday) {
             int[] ymd = CalendarUtil.getYMD(new Date());
-            selectPosition=ymd[2]+calendarBeanList.get(0).first-1;
+            mLastSelectPosition=ymd[2]+calendarBeanList.get(0).first-1;
         }else{
-            selectPosition=calendarBeanList.get(0).first;
+            mLastSelectPosition=calendarBeanList.get(0).first;
         }
     }
 
@@ -56,7 +58,7 @@ public class CalendarMonthView extends RecyclerView {
         public void onBindViewHolder(ViewHolder holder, int position) {
             CalendarBean calendarBean = calendarBeanList.get(position);
             holder.tv.setText(String.valueOf(calendarBean.day));
-            holder.tv.setSelected(selectPosition==position);
+            holder.tv.setSelected(mLastSelectPosition==position);
 //            如果不是当月设置其他颜色
             if (calendarBean.mothFlag != 0) {
                 holder.tv.setTextColor(0xff9299a1);
@@ -79,12 +81,22 @@ public class CalendarMonthView extends RecyclerView {
                 tv.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        int layoutPosition = getLayoutPosition();
-                        if (selectPosition != -1 && selectPosition != layoutPosition) {
-                            getChildAt(selectPosition).setSelected(false);
-                            getChildAt(layoutPosition).setSelected(true);
-                            notifyItemChanged(selectPosition);   //如果不掉用的话，第一次刷新不了
-                            selectPosition = layoutPosition;
+
+                        int mCurrentSelectPosition = getLayoutPosition();
+//                        int mCurrentSelectPosition = getAdapterPosition();
+                        Log.d("ViewHolder", "selectPosition");
+                        Log.d("ViewHolder", "layoutPosition:" + mCurrentSelectPosition);
+                        if (mLastSelectPosition != -1 && mLastSelectPosition != mCurrentSelectPosition) {
+//                            getChildAt(mLastSelectPosition).setSelected(false);
+//                            getChildAt(mCurrentSelectPosition).setSelected(true);
+                            
+                            getLayoutManager().findViewByPosition(mCurrentSelectPosition).setSelected(true);
+                                getLayoutManager().findViewByPosition(mLastSelectPosition).setSelected(false);
+                            Log.e("xxx", "mLastSelectPosition:" + mLastSelectPosition);
+                            notifyItemChanged(mLastSelectPosition);   //如果不掉用的话，第一次刷新不了
+                            notifyItemChanged(mCurrentSelectPosition);   //如果不掉用的话，第一次刷新不了
+//                            notifyDataSetChanged();
+                            mLastSelectPosition = mCurrentSelectPosition;
                         }
                     }
                 });

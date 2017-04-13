@@ -1,6 +1,8 @@
 package com.example.administrator.calendardemo.utils;
 
 
+import android.util.Log;
+
 import com.example.administrator.calendardemo.entity.CalendarBean;
 
 import java.util.ArrayList;
@@ -29,7 +31,47 @@ public class CalendarUtil {
     }
 
 
+
+    //查询周缓存
+    private static HashMap<String, List<CalendarBean>> weekCache=new HashMap<>();
+
+    public static List<CalendarBean> getWeekOfDayList(int y,int m,int d){
+        int weekOfMonth = getWeekOfMonth(y, m, d);
+        String key=String.valueOf(y+m+weekOfMonth);
+        if (weekCache.containsKey(key)) {
+            List<CalendarBean> calendarBeen = weekCache.get(key);
+            if (calendarBeen == null||calendarBeen.isEmpty()) {
+                weekCache.remove(key);
+                System.out.println("isEmpty");
+            }else{
+                System.out.println("cache");
+                return calendarBeen;
+            }
+        }
+        System.out.println("not cache");
+        List<CalendarBean> monthOfDayList = getMonthOfDayList(y, m);
+        List<CalendarBean> list = monthOfDayList.subList((weekOfMonth - 1) * 7, weekOfMonth * 7);
+        weekCache.put(key, list);
+        return list;
+    }
+
+
+    /**
+     *
+     * @param y
+     * @param m
+     * @param day
+     * @return 今天是第几周，例如2017413返回的是3(第三周),201741返回的是1(第一周)
+     */
+    public static int getWeekOfMonth(int y, int m, int day) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(y, m - 1, day);
+        return calendar.get(Calendar.WEEK_OF_MONTH);
+    }
+
     private static HashMap<String, List<CalendarBean>> cache = new HashMap<>();
+
+
 
 
     /**
@@ -43,8 +85,10 @@ public class CalendarUtil {
         if (cache.containsKey(key)) {
             List<CalendarBean> list = cache.get(key);
             if (list == null) {
+                Log.d("CalendarUtil", "list == null");
                 cache.remove(key);
             } else {
+                Log.d("CalendarUtil", "list != null");
                 return list;
             }
         }

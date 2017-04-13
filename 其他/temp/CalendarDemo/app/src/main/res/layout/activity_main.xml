@@ -8,6 +8,7 @@
     android:background="@drawable/background_main"
     android:orientation="vertical"
     tools:context="com.example.administrator.calendardemo.MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -110,15 +111,16 @@
             />
 
     </LinearLayout>
+
     <com.example.administrator.calendardemo.widget.CalendarViewPager
         android:id="@+id/vp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/toggle"
-        android:text="月和周切换"
-        android:background="#3c3c3c"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    <!--<Button-->
+    <!--android:id="@+id/toggle"-->
+    <!--android:text="月和周切换"-->
+    <!--android:background="#3c3c3c"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"/>-->
 </LinearLayout>
