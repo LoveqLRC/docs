@@ -1,8 +1,9 @@
 package com.example.administrator.calendardemo.widget;
 
 import android.content.Context;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,18 +22,20 @@ import java.util.List;
 public class CalendarWeekView extends RecyclerView {
 
     private final List<CalendarBean> calendarBeanList;
-    private int selectPosition = -1;
+    private int mLastSelectPosition = -1;
 
-    public CalendarWeekView(Context context,List<CalendarBean> calendarBeanList) {
+    public CalendarWeekView(Context context, List<CalendarBean> calendarBeanList, int lastPosition) {
         super(context);
         this.calendarBeanList = calendarBeanList;
-        initSelectPosition();
-        setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
+        this.mLastSelectPosition = lastPosition;
+//        initSelectPosition();
+//        setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
+        setLayoutManager(new GridLayoutManager(context, 7));
+        setAdapter(new CalendarWeekAdapter());
     }
 
-    private void initSelectPosition() {
-
-    }
+//    private void initSelectPosition() {
+//    }
 
     public class CalendarWeekAdapter extends RecyclerView.Adapter<CalendarWeekAdapter.ViewHolder> {
 
@@ -44,28 +47,49 @@ public class CalendarWeekView extends RecyclerView {
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
+            Log.d("CalendarWeekAdapter", "position:" + position);
             CalendarBean calendarBean = calendarBeanList.get(position);
             holder.tv.setText(String.valueOf(calendarBean.day));
-            holder.tv.setSelected(selectPosition==position);
+            holder.tv.setSelected(mLastSelectPosition == position);
 //            如果不是当月设置其他颜色
-            if (calendarBean.mothFlag != 0) {
-                holder.tv.setTextColor(0xff9299a1);
-            } else {
-                holder.tv.setTextColor(0xffffffff);
-            }
+//            if (calendarBean.mothFlag != 0) {
+//                holder.tv.setTextColor(0xff9299a1);
+//            } else {
+//                holder.tv.setTextColor(0xffffffff);
+//            }
         }
 
         @Override
         public int getItemCount() {
-            return 0;
+            return calendarBeanList == null ? 0 : calendarBeanList.size();
         }
 
         public class ViewHolder extends RecyclerView.ViewHolder {
             private final TextView tv;
+
             public ViewHolder(View itemView) {
                 super(itemView);
                 tv = ((TextView) itemView.findViewById(R.id.text));
+                tv.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int mCurrentSelectPosition = getLayoutPosition();
+                        if (mLastSelectPosition != -1 && mLastSelectPosition != mCurrentSelectPosition) {
+
+                            getLayoutManager().findViewByPosition(mCurrentSelectPosition).setSelected(true);
+                            getLayoutManager().findViewByPosition(mLastSelectPosition).setSelected(false);
+
+                            notifyItemChanged(mLastSelectPosition);   //如果不掉用的话，第一次刷新不了
+                            notifyItemChanged(mCurrentSelectPosition);   //如果不掉用的话，第一次刷新不了
+
+//                            notifyDataSetChanged();
+
+                            mLastSelectPosition = mCurrentSelectPosition;
+                        }
+                    }
+                });
             }
         }
     }
+
 }

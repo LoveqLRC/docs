@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -63,6 +64,23 @@ public class CalendarViewPager extends ViewPager {
 //                cache.addLast((CalendarMonthView) object);
             }
         });
+
+        addOnPageChangeListener(new OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                Log.d("CalendarViewPager", "position");
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     @Override
@@ -76,5 +94,7 @@ public class CalendarViewPager extends ViewPager {
             heightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY);
         }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+//        View view = getChildAt(0);
+//        Log.d("CalendarViewPager", "view.getMeasuredHeight():" + view.getMeasuredHeight());
     }
 }

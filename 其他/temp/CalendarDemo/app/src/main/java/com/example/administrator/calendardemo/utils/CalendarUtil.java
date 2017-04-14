@@ -1,8 +1,6 @@
 package com.example.administrator.calendardemo.utils;
 
 
-import android.util.Log;
-
 import com.example.administrator.calendardemo.entity.CalendarBean;
 
 import java.util.ArrayList;
@@ -31,24 +29,23 @@ public class CalendarUtil {
     }
 
 
-
     //查询周缓存
-    private static HashMap<String, List<CalendarBean>> weekCache=new HashMap<>();
+    private static HashMap<String, List<CalendarBean>> weekCache = new HashMap<>();
 
-    public static List<CalendarBean> getWeekOfDayList(int y,int m,int d){
+
+    public static List<CalendarBean> getWeekOfDayList(int y, int m, int d) {
         int weekOfMonth = getWeekOfMonth(y, m, d);
-        String key=String.valueOf(y+m+weekOfMonth);
+//        String key=y+m+d+"";
+        String key = String.valueOf(y * 10000 + m * 100 + d);
         if (weekCache.containsKey(key)) {
             List<CalendarBean> calendarBeen = weekCache.get(key);
-            if (calendarBeen == null||calendarBeen.isEmpty()) {
+            if (calendarBeen == null || calendarBeen.isEmpty()) {
                 weekCache.remove(key);
-                System.out.println("isEmpty");
-            }else{
-                System.out.println("cache");
+            } else {
                 return calendarBeen;
             }
         }
-        System.out.println("not cache");
+
         List<CalendarBean> monthOfDayList = getMonthOfDayList(y, m);
         List<CalendarBean> list = monthOfDayList.subList((weekOfMonth - 1) * 7, weekOfMonth * 7);
         weekCache.put(key, list);
@@ -57,7 +54,6 @@ public class CalendarUtil {
 
 
     /**
-     *
      * @param y
      * @param m
      * @param day
@@ -72,8 +68,6 @@ public class CalendarUtil {
     private static HashMap<String, List<CalendarBean>> cache = new HashMap<>();
 
 
-
-
     /**
      * @param y
      * @param m
@@ -81,14 +75,12 @@ public class CalendarUtil {
      */
     public static List<CalendarBean> getMonthOfDayList(int y, int m) {
 
-        String key = y + "" + m;
+        String key = y * 100 + "" + m;
         if (cache.containsKey(key)) {
             List<CalendarBean> list = cache.get(key);
             if (list == null) {
-                Log.d("CalendarUtil", "list == null");
                 cache.remove(key);
             } else {
-                Log.d("CalendarUtil", "list != null");
                 return list;
             }
         }
@@ -104,7 +96,7 @@ public class CalendarUtil {
         for (int i = fweek - 1; i > 0; i--) {
             CalendarBean bean = getCalendarBean(y, m, 1 - i);
             bean.mothFlag = -1;
-            bean.first=fweek-1;
+            bean.first = fweek - 1;
             list.add(bean);
 
         }
@@ -112,7 +104,7 @@ public class CalendarUtil {
         //获取当月的天数
         for (int i = 0; i < total; i++) {
             CalendarBean bean = getCalendarBean(y, m, i + 1);
-            bean.first=fweek-1;
+            bean.first = fweek - 1;
             list.add(bean);
         }
 
@@ -120,7 +112,7 @@ public class CalendarUtil {
         for (int i = 0; i < 42 - (fweek - 1) - total; i++) {
             CalendarBean bean = getCalendarBean(y, m, total + i + 1);
             bean.mothFlag = 1;
-            bean.first=fweek-1;
+            bean.first = fweek - 1;
             list.add(bean);
         }
         return list;
@@ -166,5 +158,19 @@ public class CalendarUtil {
         cal.set(y, m - 1, 1);
         int dateOfMonth = cal.getActualMaximum(Calendar.DATE);
         return dateOfMonth;
+    }
+
+
+    /**
+     * 根据当天，获取前7天，或后7天
+     *
+     * @param position 正数获取前7天，负数获取后7天
+     * @return
+     */
+    public static int[] getSevenDay(int position) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        calendar.add(Calendar.DAY_OF_MONTH, -7 * position);
+        return new int[]{calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DATE)};
     }
 }
