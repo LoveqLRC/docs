@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.calendardemo.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/actbar_home_up_indicator_white_normal"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2016/10/10"
+            android:textColor="#ffffff"
+            />
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="0dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="日"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="一"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="二"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="三"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="四"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="五"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="六"
+            android:textColor="#ffffff"
+            />
+
+    </LinearLayout>
+
+
+    <!--<com.example.administrator.calendardemo.widget.CalendarLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--&gt;-->
+
+    <!--<com.example.administrator.calendardemo.widget.CalendarViewPager-->
+    <!--android:id="@+id/vp"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+
+    <!--<TextView-->
+    <!--android:layout_marginTop="100dp"-->
+    <!--android:id="@+id/tv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="#fff"-->
+    <!--android:gravity="center"-->
+    <!--android:text="subList"/>-->
+
+    <!--</com.example.administrator.calendardemo.widget.CalendarLayout>-->
+
+    <!--<com.example.administrator.calendardemo.widget.CalendarTestLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--&gt;-->
+
+    <!--<com.example.administrator.calendardemo.widget.CalendarViewPager-->
+    <!--android:id="@+id/vp"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+    <!--</com.example.administrator.calendardemo.widget.CalendarTestLayout>-->
+
+    <com.example.administrator.calendardemo.ui.CalendarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.administrator.calendardemo.ui.CalendarViewPager
+            android:id="@+id/myvp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#fff"-->
+        <!--android:gravity="center"-->
+        <!--android:text="subList"/>-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            />
+    </com.example.administrator.calendardemo.ui.CalendarLayout>
+    <!--<Button-->
+    <!--android:id="@+id/toggle"-->
+    <!--android:text="月和周切换"-->
+    <!--android:background="#3c3c3c"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"/>-->
+</LinearLayout>

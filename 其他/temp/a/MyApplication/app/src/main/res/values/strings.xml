@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">定位Demo</string>
+    <string name="text">轨迹记录(文字)</string>
+    <string name="pic">轨迹记录(地图)</string>
+    <string name="picture">图片展示</string>
+    <string name="demo">测试</string>
+    <string name="address">地点搜索</string>
+    <string name="address_select">地点检索</string>
+</resources>
