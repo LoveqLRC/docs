@@ -28,6 +28,8 @@
 
 [2017Android进阶之路与你同行](http://www.jianshu.com/p/c0ec2a7fc26a)
 
+[深入浅出Android Support Annotations](https://asce1885.gitbooks.io/android-rd-senior-advanced/content/shen_ru_qian_chu_android_support_annotations.html)
+
 #AndroidStudio工具
 
 [Android Studio快速开发之道](http://blog.csdn.net/yissan/article/details/53374437)
@@ -115,3 +117,5 @@
 [[干货] Glow Android 优化实践](http://www.jianshu.com/p/a8b5278cdbcd)
 
 [大家都是怎样处理Gradle中的这个文件下载慢的问题的？](https://www.zhihu.com/question/37810416/answer/153168766)
+
+[android中xml tools属性详解](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0309/2567.html)
