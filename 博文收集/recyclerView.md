@@ -1,0 +1,1 @@
+在Activity 的Manifest 加上`android:windowSoftInputMode = "adjustPan"`解决键盘遮盖`recyclerview`问题

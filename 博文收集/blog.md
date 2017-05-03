@@ -30,13 +30,17 @@
 
 [深入浅出Android Support Annotations](https://asce1885.gitbooks.io/android-rd-senior-advanced/content/shen_ru_qian_chu_android_support_annotations.html)
 
+[Android AOP注解Annotation详解（一）](http://www.jb51.net/article/107659.htm)
+
+[Android开源：Material-Animations - 过场动画](http://www.open-open.com/lib/view/open1487316138259.html)
+
+[Android组件化项目详细实施方案](http://blog.csdn.net/guiying712/article/details/55213884)
+
 #AndroidStudio工具
 
 [Android Studio快速开发之道](http://blog.csdn.net/yissan/article/details/53374437)
 
 [Android攻城狮—全套必备神级工具（开发，插件，效率）](http://www.jianshu.com/p/0911efbf8009)
-
-[Android Studio快速开发之道](http://blog.csdn.net/yissan/article/details/53374437)
 
 [Android Studio每日小技巧](http://www.jianshu.com/p/a40fc225c337?utm_campaign=hugo&utm_medium=reader_share&utm_content=note&utm_source=qq)
 
@@ -116,6 +120,7 @@
 
 [[干货] Glow Android 优化实践](http://www.jianshu.com/p/a8b5278cdbcd)
 
-[大家都是怎样处理Gradle中的这个文件下载慢的问题的？](https://www.zhihu.com/question/37810416/answer/153168766)
+[大家都是怎样处理Gradle中的这个文件下载慢的问题的？](https://www.zhihu.com/question/37810416/answer/153168766)( maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'})
+
 
 [android中xml tools属性详解](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0309/2567.html)
