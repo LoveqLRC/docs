@@ -18,6 +18,8 @@
 
 [启舰](http://blog.csdn.net/harvic880925?viewmode=contents)(满满的干货)
 
+[wzgiceman](http://blog.csdn.net/wzgiceman?viewmode=contents)
+
 #学习
 
 [Android 开发学习路线图](https://www.diycode.cc/topics/117)
@@ -96,6 +98,8 @@
 #性能优化
 
 [Android应用瘦身，从18MB到12.5MB](http://blog.coderclock.com/2017/01/24/android/Android%E5%BA%94%E7%94%A8%E7%98%A6%E8%BA%AB%EF%BC%8C%E4%BB%8E18MB%E5%88%B012.5MB/)
+
+[Android应用开发性能优化完全分析](http://blog.csdn.net/yanbober/article/details/48394201)
 
 #其他
 
